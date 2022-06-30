@@ -17,7 +17,7 @@
                             <div class="col-md-12">
                                 <div class="form-floating date">
                                     <asp:Label ID="Label1" runat="server" Text="Tipo Evento" ForeColor="White"></asp:Label>
-                                    <asp:DropDownList ID="dpListaEventos" runat="server" placeholder="tipo Evento" CssClass="form-control" ForeColor="Black"></asp:DropDownList>
+                                    <asp:DropDownList  ID="dpListaEventos" runat="server" placeholder="tipo Evento" CssClass="form-control" ForeColor="Black" AutoPostBack="True"></asp:DropDownList>
                                 </div>
                             </div>
 

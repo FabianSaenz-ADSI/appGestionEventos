@@ -114,6 +114,15 @@ namespace appEventos2._0.Presentacion
         protected global::System.Web.UI.WebControls.Button btnReservas;
 
         /// <summary>
+        /// Control btnMisEventos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMisEventos;
+
+        /// <summary>
         /// Control btnCerrarSesion.
         /// </summary>
         /// <remarks>

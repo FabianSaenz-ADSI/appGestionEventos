@@ -30,7 +30,7 @@ namespace appEventos2._0.Datos
 
         public int mtdRegistrarEvento(clEventosE objDatosEvento)
         {
-            string consulta = "INSERT  INTO evento(nombreEvento,ciudadEvento,lugarEvento,edadMinima,responsable,direccion,categoria,aforo,aperturaPuertas,nit,fechaInicioEvento,fechaFinalEvento,imagenRepresentativa,idTipoEvento)values('" + objDatosEvento.nombreEvento + "','" + objDatosEvento.ciudadEvento + "','" + objDatosEvento.lugarEvento + "','" + objDatosEvento.edadMinima + "','" + objDatosEvento.responsable + "','" + objDatosEvento.direccion + "','" + objDatosEvento.categoria + "'," + objDatosEvento.aforo + ",'" + objDatosEvento.aperturaPuertas + "'," + objDatosEvento.nit + ",'" + objDatosEvento.fechaInicioEvento + "','" + objDatosEvento.fechaFinalEvento + "','" + objDatosEvento.imagenRepresentativa + "'," + objDatosEvento.idTipoEvento + ")";
+            string consulta = "INSERT  INTO evento(nombreEvento,ciudadEvento,lugarEvento,edadMinima,responsable,direccion,categoria,aforo,aperturaPuertas,nit,fechaInicioEvento,fechaFinalEvento,imagenRepresentativa,idTipoEvento)values('" + objDatosEvento.nombreEvento + "','" + objDatosEvento.ciudadEvento + "','" + objDatosEvento.lugarEvento + "','" + objDatosEvento.edadMinima + "','" + objDatosEvento.responsable + "','" + objDatosEvento.direccion + "','" + objDatosEvento.categoria + "'," + objDatosEvento.aforo + ",'" + objDatosEvento.aperturaPuertas + "'," + objDatosEvento.nit + ",'" + objDatosEvento.fechaInicioEvento + "','" + objDatosEvento.fechaFinalEvento + "','" + objDatosEvento.imagenRepresentativa + "','" + objDatosEvento.idTipoEvento + "')";
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;

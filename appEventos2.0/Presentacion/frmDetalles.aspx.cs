@@ -47,7 +47,12 @@ namespace appEventos2._0.Presentacion
             Response.Redirect("frmCompraBoleta.aspx?idE=" + idEventoCompra);
 
 
-           
+
+        }
+
+        protected void btnQr_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmCompraQr.aspx");
         }
     }
 }

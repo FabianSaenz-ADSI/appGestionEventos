@@ -14,7 +14,11 @@ namespace appEventos2._0.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            mtdLLenarDropDown();
+            if (!IsPostBack)
+            {
+                mtdLLenarDropDown();
+            }
+
 
         }
 
@@ -50,7 +54,7 @@ namespace appEventos2._0.Presentacion
                 objDatosEvento.nit = int.Parse(txtNit.Text.ToString());
                 objDatosEvento.fechaInicioEvento = txtFechaInicial.Text.ToString();
                 objDatosEvento.fechaFinalEvento = txtFechaFinal.Text.ToString();
-                objDatosEvento.idTipoEvento = int.Parse(dpListaEventos.SelectedValue.ToString());
+                objDatosEvento.idTipoEvento = int.Parse(dpListaEventos.SelectedValue);
 
                 string ext = Path.GetExtension(fluImagen.FileName);
 

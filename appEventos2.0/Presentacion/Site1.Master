@@ -139,6 +139,7 @@
 
                                     <asp:Button ID="btnPerfil" runat="server" Text="Mi perfil" class="dropdown-item" OnClick="btnPerfil_Click" />
                                     <asp:Button ID="btnReservas" runat="server" Text="Mis reservas" class="dropdown-item" OnClick="btnReservas_Click" />
+                                    <asp:Button ID="btnMisEventos" runat="server" Text="Mis Eventos" class="dropdown-item" OnClick="btnMisEventos_Click" />
                                     <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar sesión"  class="dropdown-item" OnClick="btnCerrarSesion_Click" />
 
 

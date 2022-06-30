@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -89,6 +92,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Presentacion\frmBoletas.aspx" />
     <Content Include="Presentacion\frmCompraBoleta.aspx" />
+    <Content Include="Presentacion\frmCompraQr.aspx" />
     <Content Include="Presentacion\frmDetalleReserva.aspx" />
     <Content Include="Presentacion\frmDetalles.aspx" />
     <Content Include="Presentacion\frmEditarEmpresa.aspx" />
@@ -156,6 +160,7 @@
     <Content Include="Presentacion\script\imagen.js" />
     <Content Include="Presentacion\frmEventos.aspx" />
     <Content Include="Presentacion\script\reservas.js" />
+    <Content Include="Presentacion\frmEditarEvento.aspx" />
     <Content Include="RecursosLogin\cssColorFormulario\main.css" />
     <Content Include="RecursosLogin\cssColorFormulario\main.min.css" />
     <Content Include="RecursosLogin\css\sb-admin-2.css" />
@@ -1916,6 +1921,7 @@
     <Compile Include="Datos\clCompraBoletaD.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clDetallesD.cs" />
+    <Compile Include="Datos\clEditarEventoD.cs" />
     <Compile Include="Datos\clEmpresaD.cs" />
     <Compile Include="Datos\clEventosD.cs" />
     <Compile Include="Datos\clLoginD.cs" />
@@ -1940,6 +1946,7 @@
     <Compile Include="Logica\clBoletasL.cs" />
     <Compile Include="Logica\clCompraBoletaL.cs" />
     <Compile Include="Logica\clDetallesL.cs" />
+    <Compile Include="Logica\clEditarEventoL.cs" />
     <Compile Include="Logica\clEmpresaL.cs" />
     <Compile Include="Logica\clEventoL.cs" />
     <Compile Include="Logica\clLoginL.cs" />
@@ -1967,6 +1974,13 @@
     </Compile>
     <Compile Include="Presentacion\frmCompraBoleta.aspx.designer.cs">
       <DependentUpon>frmCompraBoleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCompraQr.aspx.cs">
+      <DependentUpon>frmCompraQr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCompraQr.aspx.designer.cs">
+      <DependentUpon>frmCompraQr.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmDetalleReserva.aspx.cs">
       <DependentUpon>frmDetalleReserva.aspx</DependentUpon>
@@ -2072,6 +2086,13 @@
     </Compile>
     <Compile Include="Presentacion\frmEventos.aspx.designer.cs">
       <DependentUpon>frmEventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmEditarEvento.aspx.cs">
+      <DependentUpon>frmEditarEvento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmEditarEvento.aspx.designer.cs">
+      <DependentUpon>frmEditarEvento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

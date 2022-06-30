@@ -81,5 +81,10 @@ namespace appEventos2._0.Presentacion
         {
             Response.Redirect("frmMisReservas.aspx");
         }
+
+        protected void btnMisEventos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmEditarEvento.aspx");
+        }
     }
 }
