@@ -41,9 +41,9 @@
     <%--sweed alert--%>
     <script src="../RecursosLogin/sweetalert-master/docs/assets/sweetalert/sweetalert.min.js"></script>
 
-
-
-
+    
+   <%--paypal--%>
+     <script  src="https://www.paypal.com/sdk/js?client-id=AVVYE_HyMVI-R3bz3j_zo1tEV8B-3ZdlpPrDLAe9YAdfaNbBE30hgcD1Ne1cpXPjeorT3t6o8h5vaksN"></script>
 
 
     <!-- jQuery library -->

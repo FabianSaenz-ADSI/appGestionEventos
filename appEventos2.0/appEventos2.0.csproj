@@ -24,7 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>4.2</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -89,6 +89,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Presentacion\frmBoletas.aspx" />
     <Content Include="Presentacion\frmCompraBoleta.aspx" />
+    <Content Include="Presentacion\frmConfirmarPago.aspx" />
     <Content Include="Presentacion\frmDetalleReserva.aspx" />
     <Content Include="Presentacion\frmDetalles.aspx" />
     <Content Include="Presentacion\frmEditarEmpresa.aspx" />
@@ -1923,6 +1924,7 @@
     <Compile Include="Datos\clReservaBoletaD.cs" />
     <Compile Include="Entidad\clBoletasE.cs" />
     <Compile Include="Entidad\clBoleteriaE.cs" />
+    <Compile Include="Entidad\clCompraE.cs" />
     <Compile Include="Entidad\clEmpresaE.cs" />
     <Compile Include="Entidad\clEmpresaEventoE.cs" />
     <Compile Include="Entidad\clEventosE.cs" />
@@ -1964,6 +1966,13 @@
     </Compile>
     <Compile Include="Presentacion\frmCompraBoleta.aspx.designer.cs">
       <DependentUpon>frmCompraBoleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConfirmarPago.aspx.cs">
+      <DependentUpon>frmConfirmarPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConfirmarPago.aspx.designer.cs">
+      <DependentUpon>frmConfirmarPago.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmDetalleReserva.aspx.cs">
       <DependentUpon>frmDetalleReserva.aspx</DependentUpon>

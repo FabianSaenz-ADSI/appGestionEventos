@@ -40,14 +40,22 @@ namespace appEventos2._0.Presentacion
         protected void btnAsistir_Click(object sender, EventArgs e)
         {
 
-            Button btn = (Button)sender;
-            ListViewDataItem item = (ListViewDataItem)btn.NamingContainer;
-            Label lbl = (Label)item.FindControl("labelDetalles");
-            int idEventoCompra = int.Parse(labelDetalles.Text);
-            Response.Redirect("frmCompraBoleta.aspx?idE=" + idEventoCompra);
 
+            if (Session["idUsuarioPersona"] != null || Session["idUsuarioEmpresa"] != null)
+            {
 
-           
+                Button btn = (Button)sender;
+                ListViewDataItem item = (ListViewDataItem)btn.NamingContainer;
+                Label lbl = (Label)item.FindControl("labelDetalles");
+                int idEventoCompra = int.Parse(labelDetalles.Text);
+                Response.Redirect("frmCompraBoleta.aspx?idE=" + idEventoCompra);
+
+            }
+            else
+            {
+                Response.Redirect("../Login.aspx");
+            }
+
         }
     }
 }

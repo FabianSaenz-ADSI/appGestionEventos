@@ -13,10 +13,28 @@ namespace appEventos2._0.Logica
         {
             clCompraBoletaD objEventoD = new clCompraBoletaD();
             clBoletasE objEvento = new clBoletasE();
-            objEvento = objEventoD.mtdListarCompra(idEvento);
+            objEvento = objEventoD.mtdListarComprar(idEvento);
             return objEvento;
 
 
         }
+        public int mtdRegistrar(clCompraE objCom)
+        {
+            clCompraBoletaD objCliente = new clCompraBoletaD();
+            int registro = objCliente.mtdRegistrar(objCom);
+            return registro;
+
+        }
+        public int mtdRegistrarp (clCompraE objCom)
+        {
+            clCompraBoletaD objCliente = new clCompraBoletaD();
+            int registro = objCliente.mtdRegistrarp (objCom);
+            return registro;
+
+        }
+
+
+
+
     }
 }
