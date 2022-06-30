@@ -12,7 +12,7 @@ namespace appEventos2._0.Datos
 
         public clEmpresaEventoE mtdListarEmpresaEvento(clEventosE objDatosEvento, string tipoRolEmpresa)
         {
-            string consulta = "select  empresaEvento.idEmpresaEvento,evento.nombreEvento,evento.fechaInicioEvento,evento.fechaFinalEvento, evento.aperturaPuertas, evento.lugarEvento, evento.responsable,evento.ciudadEvento,evento.direccion" +
+            string consulta = "select  empresaEvento.idEmpresaEvento,evento.nombreEvento,evento.fechaInicioEvento,evento.fechaFinalEvento, evento.aperturaPuertas, evento.lugarEvento, evento.responsable,evento.ciudadEvento,evento.direccion, evento.imagenRepresentativa" +
             " from Empresa  inner join empresaEvento " +
             " on empresaEvento.idEmpresa = Empresa.idEmpresa " +
             "inner join evento on empresaEvento.idEvento=evento.idEvento where evento.idEvento=" + objDatosEvento.idEvento + " and tipoRolEmpresa='" + tipoRolEmpresa + "'";
@@ -35,6 +35,8 @@ namespace appEventos2._0.Datos
                 objDatosEmpresaEvento.responsable = tbDatos.Rows[0]["responsable"].ToString();
                 objDatosEmpresaEvento.ciudadEvento = tbDatos.Rows[0]["ciudadEvento"].ToString();
                 objDatosEmpresaEvento.direccion = tbDatos.Rows[0]["direccion"].ToString();
+                objDatosEmpresaEvento.imagenRepresentativa = tbDatos.Rows[0]["imagenRepresentativa"].ToString();
+
 
             }
             else
@@ -50,7 +52,7 @@ namespace appEventos2._0.Datos
 
         public clPersonaEventoE mtdListarPersonaEvento(clEventosE objDatosEvento, string tipoRolPersona)
         {
-            string consulta = "select  personaEvento.idPersonaEvento,evento.nombreEvento,evento.fechaInicioEvento,evento.fechaFinalEvento, evento.aperturaPuertas, evento.lugarEvento, evento.responsable,evento.ciudadEvento,evento.direccion" +
+            string consulta = "select  personaEvento.idPersonaEvento,evento.nombreEvento,evento.fechaInicioEvento,evento.fechaFinalEvento, evento.aperturaPuertas, evento.lugarEvento, evento.responsable,evento.ciudadEvento,evento.direccion, evento.imagenRepresentativa" +
             " from persona  inner join personaEvento " +
             " on personaEvento.idPersona = persona.idPersona " +
             "inner join evento on personaEvento.idEvento = evento.idEvento where evento.idEvento=" + objDatosEvento.idEvento + " and tipoRolPersona='" + tipoRolPersona + "'";
@@ -72,6 +74,8 @@ namespace appEventos2._0.Datos
                 objDatosPersonaEvento.responsable = tbDatos.Rows[0]["responsable"].ToString();
                 objDatosPersonaEvento.ciudadEvento = tbDatos.Rows[0]["ciudadEvento"].ToString();
                 objDatosPersonaEvento.direccion = tbDatos.Rows[0]["direccion"].ToString();
+                objDatosPersonaEvento.imagenRepresentativa = tbDatos.Rows[0]["imagenRepresentativa"].ToString();
+
             }
             else
             {

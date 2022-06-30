@@ -84,6 +84,7 @@ namespace appEventos2._0.Presentacion
                         txtResponsable.Text = objEmpresaEventoE.responsable;
                         txtCiudadEvento.Text = objEmpresaEventoE.ciudadEvento;
                         txtDireccionEvento.Text = objEmpresaEventoE.direccion;
+                        imgEvento.ImageUrl = "logoEvento\\" + objEmpresaEventoE.imagenRepresentativa;
                         Session["idEmpresaEvento"] = objEmpresaEventoE.idEmpresaEvento;
                     }
                     else
@@ -98,6 +99,7 @@ namespace appEventos2._0.Presentacion
                         txtResponsable.Text = objDatosPersonaEventoE.responsable;
                         txtCiudadEvento.Text = objDatosPersonaEventoE.ciudadEvento;
                         txtDireccionEvento.Text = objDatosPersonaEventoE.direccion;
+                        imgEvento.ImageUrl = "logoEvento\\" + objDatosPersonaEventoE.imagenRepresentativa;
                         Session["idPersonaEvento"] = objDatosPersonaEventoE.idPersonaEvento;
 
                     }
