@@ -43,6 +43,7 @@ namespace appEventos2._0.Presentacion
             lblRol.Text = " /Patrocinador";
             Session["idTipoRol"] = "Patrocinador";
             crearEvento.Visible = false;
+            Response.Redirect("frmPatrocinar.aspx");
 
         }
 

@@ -17,16 +17,12 @@ namespace appEventos2._0.Presentacion
             HtmlAnchor crearCuenta = (HtmlAnchor)this.Master.FindControl("crearCuenta");
             HtmlAnchor crearEvento = (HtmlAnchor)this.Master.FindControl("crearEvento");
             HtmlAnchor tipoRol = (HtmlAnchor)this.Master.FindControl("tipoRol");
-            HtmlAnchor evento = (HtmlAnchor)this.Master.FindControl("A2");
             Button ingresar = this.Master.FindControl("btnIngresarLogin") as Button;
 
             crearCuenta.Visible = false;
             crearEvento.Visible = false;
             tipoRol.Visible = false;
-            evento.Visible = false;
             ingresar.Visible = false;
-
-
 
 
             if (!IsPostBack)

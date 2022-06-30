@@ -97,6 +97,7 @@
     <Content Include="Presentacion\frmMedios.aspx" />
     <Content Include="Presentacion\frmMisEventosP.aspx" />
     <Content Include="Presentacion\frmMisReservas.aspx" />
+    <Content Include="Presentacion\frmPatrocinar.aspx" />
     <Content Include="Presentacion\frmPerfilPersona.aspx" />
     <Content Include="Presentacion\frmPersona.aspx" />
     <Content Include="Presentacion\frmRecuperarContraseña.aspx" />
@@ -1925,10 +1926,12 @@
     <Compile Include="Entidad\clBoleteriaE.cs" />
     <Compile Include="Entidad\clEmpresaE.cs" />
     <Compile Include="Entidad\clEmpresaEventoE.cs" />
+    <Compile Include="Entidad\clEmpresaEventoJ.cs" />
     <Compile Include="Entidad\clEventosE.cs" />
     <Compile Include="Entidad\clMediosE.cs" />
     <Compile Include="Entidad\clPersonaE.cs" />
     <Compile Include="Entidad\clPersonaEventoE.cs" />
+    <Compile Include="Entidad\clPersonaEventoJ.cs" />
     <Compile Include="Entidad\clReservaE.cs" />
     <Compile Include="Entidad\clTipoEventoE.cs" />
     <Compile Include="Global.asax.cs">
@@ -2020,6 +2023,13 @@
     </Compile>
     <Compile Include="Presentacion\frmMisReservas.aspx.designer.cs">
       <DependentUpon>frmMisReservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPatrocinar.aspx.cs">
+      <DependentUpon>frmPatrocinar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmPatrocinar.aspx.designer.cs">
+      <DependentUpon>frmPatrocinar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmPerfilPersona.aspx.cs">
       <DependentUpon>frmPerfilPersona.aspx</DependentUpon>

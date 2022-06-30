@@ -47,5 +47,21 @@ namespace appEventos2._0.Logica
             int resultado = objEmpresaD.mtdEliminarE(idUsuarioEmpresa);
             return resultado;
         }
+
+        public List<clEventosE> mtdListarRegistrados()
+        {
+            clEmpresaD objListaR = new clEmpresaD();
+            List<clEventosE> listaRegistradosL = new List<clEventosE>();
+            listaRegistradosL = objListaR.mtdListarEventosRegistradosP();
+            return listaRegistradosL;
+        }
+        public int mtdRompimientoE(clEmpresaEventoJ objTipo)
+        {
+            clEmpresaD objTipoRol = new clEmpresaD();
+            int objTipos = objTipoRol.mtdRegistrarTipo(objTipo);
+            return objTipos;
+
+        }
+
     }
 }

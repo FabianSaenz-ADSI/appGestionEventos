@@ -72,19 +72,28 @@
                                 </div>
                             </div>
 
-                           
-
-                            <div class="col-md-6">
-                                <asp:Label ID="Label10" runat="server" Text="Logo Empresa" ForeColor="White"></asp:Label>
+                            <div class="col-md-12 text-center alig-items-center justify-content-center">
                                 <div class="form-floating">
-
-                                    <asp:Image ID="img" runat="server" Width="150" Height="150" />
-                                    <asp:FileUpload ID="flu" runat="server" onchange="mostrarImagen(this)" />
-
+                                    <asp:Label ID="Label10" runat="server" Text="Logo Empresa" ForeColor="White"></asp:Label>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" class="btn btn-primary w-25 py-3" type="submit" OnClick="btnRegistrar_Click" />
+
+                            <div class="col-md-12 text-center alig-items-center justify-content-center">
+                                <div class="form-floating">
+                                    <asp:Image ID="img" runat="server" Width="150" Height="150" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 text-center alig-items-center justify-content-center">
+                                <div class="form-floating">
+                                    <asp:FileUpload ID="flu" runat="server" onchange="mostrarImagen(this)" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 text-center alig-items-center justify-content-center">
+                                <div class="form-floating">
+                                    <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" class="btn btn-primary w-25 py-3" type="submit" OnClick="btnRegistrar_Click" />
+                                </div>
                             </div>
                         </div>
                     </form>

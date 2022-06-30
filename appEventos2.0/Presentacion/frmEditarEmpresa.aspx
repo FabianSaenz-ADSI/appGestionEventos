@@ -43,7 +43,7 @@
                             <div class="col-md-6">
                                 <div class="form-floating date">
                                     <asp:Label ID="Label5" runat="server" Text="Teléfono" ForeColor="White"></asp:Label>
-                                    <asp:TextBox ID="txtTelefonoEditar" runat="server" Class="form-control" TextMode="Number" ReadOnly="True"></asp:TextBox>
+                                    <asp:TextBox ID="txtTelefonoEditar" runat="server" Class="form-control" TextMode="Number"></asp:TextBox>
 
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-12 text-center alig-items-center justify-content-center">
                                 <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" class="btn btn-primary w-25 py-3" type="submit" OnClick="btnActualizar_Click" />
                                  <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-primary w-25 py-3" type="submit" OnClick="btnEliminar_Click" />
                             </div>

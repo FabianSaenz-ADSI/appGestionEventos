@@ -108,5 +108,14 @@ namespace appEventos2._0.Datos
             return resultado;
 
         }
+
+        public int mtdRegistrarTipoP(clPersonaEventoJ objTipo)
+        {
+            string consulta = "INSERT INTO personaEvento(idPersona,idEvento,tipoRolPersona)values('" + objTipo.idPersona + "'," + objTipo.idEvento + ",'" + objTipo.tipoRolPersona + "')";
+            clConexion objConexion = new clConexion();
+            int resultado = objConexion.mtdConectado(consulta);
+            return resultado;
+
+        }
     }
 }

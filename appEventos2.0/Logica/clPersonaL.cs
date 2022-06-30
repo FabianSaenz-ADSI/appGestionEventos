@@ -51,5 +51,13 @@ namespace appEventos2._0.Logica
             return objTipos;
 
         }
+
+        public int mtdRompimientoP(clPersonaEventoJ objTipo)
+        {
+            clPersonaD objTipoRol = new clPersonaD();
+            int objTipos = objTipoRol.mtdRegistrarTipoP(objTipo);
+            return objTipos;
+
+        }
     }
 }
