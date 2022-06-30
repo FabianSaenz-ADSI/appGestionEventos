@@ -23,7 +23,7 @@
                                 <asp:Label ID="labelDato" Visible="False" runat="server" Text='<%#Eval("idEvento") %> '></asp:Label>
 
                                 <h5 class="mb-0">Portada</h5>
-                                <asp:Image ID="Image1" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" Width="200" Height="200" /><br>
+                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("imagenRepresentativa") %>' Width="200" Height="200" /><br>
                                 <h5 class="mb-0">Evento</h5>
                                 <small><%#Eval("nombreEvento") %></small>
                                 <h5 class="mb-0">Lugar</h5>

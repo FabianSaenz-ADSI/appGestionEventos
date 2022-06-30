@@ -71,7 +71,16 @@ namespace appEventos2._0.Presentacion
         protected void mtdListarEventosInicio()
         {
             clEventoL objlistadoEventosL = new clEventoL();
-            rpEventos.DataSource = objlistadoEventosL.mtdListarEventosLogica();
+            List<clEventosE> listadoEventos = new List<clEventosE>();
+            listadoEventos = objlistadoEventosL.mtdListarEventosLogica();
+            for (int i = 0; i < listadoEventos.Count; i++)
+            {
+                listadoEventos[i].imagenRepresentativa = "logoEvento\\" + listadoEventos[i].imagenRepresentativa;
+                listadoEventos[i].nombreEvento = listadoEventos[i].nombreEvento;
+                listadoEventos[i].lugarEvento = listadoEventos[i].lugarEvento;
+                listadoEventos[i].fechaInicioEvento = listadoEventos[i].fechaInicioEvento;
+            }
+            rpEventos.DataSource = listadoEventos;
             rpEventos.DataBind();
 
         }

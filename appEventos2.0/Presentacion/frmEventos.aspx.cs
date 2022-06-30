@@ -57,13 +57,14 @@ namespace appEventos2._0.Presentacion
                 objDatosEvento.idTipoEvento = int.Parse(dpListaEventos.SelectedValue);
 
                 string ext = Path.GetExtension(fluImagen.FileName);
-
+                string ruta = Server.MapPath("logoEvento\\" + txtNombreEvento.Text + ext);
                 if (ext != "")
                 {
                     if (ext == ".jpg" || ext == ".png")
                     {
-                        string imagen = objDatosEvento.ciudadEvento + ext;
-                        objDatosEvento.imagenRepresentativa = "logoEvento\\" + imagen;
+                        fluImagen.SaveAs(ruta);
+
+                        objDatosEvento.imagenRepresentativa = txtNombreEvento.Text + ext;
 
                         clEventoL objDatosL = new clEventoL();
                         int resultado = objDatosL.mtdRegistarEventoL(objDatosEvento);
