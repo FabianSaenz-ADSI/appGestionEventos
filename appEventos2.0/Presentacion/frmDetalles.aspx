@@ -10,7 +10,7 @@
                 <div class="col-lg-4">
                     <div class="row g-3">
                         <div class="col-6 text-start">
-                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("imagenRepresentativa") %>' class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" /><br>
+                            <asp:Image ID="Image1" runat="server"  class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" /><br>
                         </div>
                         <div class="col-6 text-start">
                             <asp:Image ID="Image2" runat="server" class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" Style="margin-top: 25%;" /><br>
