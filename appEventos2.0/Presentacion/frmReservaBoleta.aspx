@@ -97,7 +97,7 @@
                         <div class="col-md-6">
                             <p1 class="text-white mb-4">Tipo de boleta</p1>
                             <div>
-                                <asp:DropDownList ID="ddlListaTipoBoleta" class="form-select form-control" runat="server" AutoPostBack="True"></asp:DropDownList>
+                                <asp:DropDownList ID="ddlListaTipoBoleta" class="form-select form-control" runat="server" ></asp:DropDownList>
                             </div>
                         </div>
 
