@@ -39,19 +39,19 @@ namespace appEventos2._0.Datos
 
         }
 
-        public int mtdRegistrar(clCompraE objCom) 
+        public int mtdRegistrar(clBoleteriaE objCom) 
         {
            
-                    string consulta = "INSERT INTO compra(idEmpresa,idEvento,precioTotal,cantidadBoletas) values (" + objCom.idEmpresa + "," + objCom.idEvento + ",'" + objCom.PrecioTotal + "','" + objCom.cantidadBoletas + "')";
+                    string consulta = "INSERT INTO boleteria(idEmpresa,idEvento,totalCompra,cantidadBoletas,fechaCompra) values (" + objCom.idEmpresa + "," + objCom.idEvento + ",'" + objCom.totalCompra + "','" + objCom.cantidadBoletas + "','"+objCom.fechaCompra+"')";
                     clConexion objConexion = new clConexion(); 
                     int resultado = objConexion.mtdConectado(consulta);
                     return resultado;
 
         }
-        public int mtdRegistrarp(clCompraE objCom)
+        public int mtdRegistrarp(clBoleteriaE objCom)
         {
 
-            string consulta = "INSERT INTO compra(idEvento,idPersona,precioTotal,cantidadBoletas) values (" + objCom.idEvento + "," + objCom.idPersona + ",'" + objCom.PrecioTotal + "','" + objCom.cantidadBoletas + "')";
+            string consulta = "INSERT INTO boleteria(idEvento,idPersona,totalCompra,cantidadBoletas,fechaCompra) values (" + objCom.idEvento + "," + objCom.idPersona + ",'" + objCom.totalCompra + "','" + objCom.cantidadBoletas + "','" + objCom.fechaCompra + "')";
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;

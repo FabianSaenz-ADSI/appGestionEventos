@@ -1924,7 +1924,6 @@
     <Compile Include="Datos\clReservaBoletaD.cs" />
     <Compile Include="Entidad\clBoletasE.cs" />
     <Compile Include="Entidad\clBoleteriaE.cs" />
-    <Compile Include="Entidad\clCompraE.cs" />
     <Compile Include="Entidad\clEmpresaE.cs" />
     <Compile Include="Entidad\clEmpresaEventoE.cs" />
     <Compile Include="Entidad\clEventosE.cs" />

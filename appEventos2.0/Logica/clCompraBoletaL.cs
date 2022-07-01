@@ -18,14 +18,14 @@ namespace appEventos2._0.Logica
 
 
         }
-        public int mtdRegistrar(clCompraE objCom)
+        public int mtdRegistrar(clBoleteriaE objCom)
         {
             clCompraBoletaD objCliente = new clCompraBoletaD();
             int registro = objCliente.mtdRegistrar(objCom);
             return registro;
 
         }
-        public int mtdRegistrarp (clCompraE objCom)
+        public int mtdRegistrarp (clBoleteriaE objCom)
         {
             clCompraBoletaD objCliente = new clCompraBoletaD();
             int registro = objCliente.mtdRegistrarp (objCom);
