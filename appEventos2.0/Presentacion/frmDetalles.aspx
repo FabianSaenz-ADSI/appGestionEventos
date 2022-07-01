@@ -10,16 +10,16 @@
                 <div class="col-lg-4">
                     <div class="row g-3">
                         <div class="col-6 text-start">
-                            <asp:Image ID="Image1" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" /><br>
+                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("imagenRepresentativa") %>' class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" /><br>
                         </div>
                         <div class="col-6 text-start">
-                            <asp:Image ID="Image2" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" Style="margin-top: 25%;" /><br>
+                            <asp:Image ID="Image2" runat="server" class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" Style="margin-top: 25%;" /><br>
                         </div>
                         <div class="col-6 text-end">
-                            <asp:Image ID="Image3" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" /><br>
+                            <asp:Image ID="Image3" runat="server" class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" /><br>
                         </div>
                         <div class="col-6 text-end">
-                            <asp:Image ID="Image4" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" /><br>
+                            <asp:Image ID="Image4" runat="server" class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" /><br>
                         </div>
                     </div>
                 </div>
@@ -68,25 +68,27 @@
                                             <small><%#Eval("nit") %></small>
 
                                             <h5 class=" ff-secondary text-start text-primary fw-normal">Fecha Inicio:</h5>
-                                            <small><%#Eval("FechaInicioEvento") %></small>
+                                            <small><%#Eval("fechaInicioEvento") %></small>
 
                                             <h5 class=" ff-secondary text-start text-primary fw-normal">Fecha Finalizacion:</h5>
-                                            <small><%#Eval("FechaFinalEvento") %></small>
+                                            <small><%#Eval("fechaFinalEvento") %></small>
 
-                                            <div class="justify-content-center text-align-item-center">
-                                                <asp:Button ID="btnRegresar" runat="server" Text="Volver" OnClick="btnRegresar_Click" CssClass="btn btn-outline-warning" />
-                                                <asp:Button ID="btnAsistir" runat="server" Text="Comprar Boleta" class="btn btn-outline-success mx-1" OnClick="btnAsistir_Click" />
-                                                <asp:Button ID="btnQr" runat="server" Text="Generar Qr" class="btn btn-outline-success mx-1" OnClick="btnQr_Click" />
-
-                                            </div>
 
                                         </ItemTemplate>
+
+
                                     </asp:ListView>
 
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div class="col offset-4">
+                    <asp:Button ID="btnRegresar" runat="server" Text="Volver" OnClick="btnRegresar_Click" CssClass="btn btn-outline-warning mx-1" />
+                    <asp:Button ID="btnAsistir" runat="server" Text="Comprar Boleta" class="btn btn-outline-success mx-1" OnClick="btnAsistir_Click" />
+                    <asp:Button ID="btnQr" runat="server" Text="Generar Qr" class="btn btn-outline-success mx-2" OnClick="btnQr_Click" />
 
                 </div>
             </div>
