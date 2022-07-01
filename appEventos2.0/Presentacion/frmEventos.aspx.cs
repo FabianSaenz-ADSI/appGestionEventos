@@ -71,21 +71,53 @@ namespace appEventos2._0.Presentacion
 
                         if (resultado > 0)
                         {
-                            ClientScript.RegisterClientScriptBlock(this.GetType(), "Realizado", "swal('Evento Registrado Exitosamente').then((value) => { window.location = 'frmInicio.aspx';});", true);
+                            int idEventoR = resultado;
 
+                            if (idEventoR > 0)
+                            {
+                                if (Session["idUsuarioEmpresa"] != null)
+                                {
+
+                                    clEmpresaEventoJ objDatosEmpresaEvento = new clEmpresaEventoJ();
+                                    int idUsuarioEmpresa = int.Parse(Session["idUsuarioEmpresa"].ToString());
+                                    string TipoRol = "Organizador";
+                                    int idEmpresa = int.Parse(Session["idUsuarioEmpresa"].ToString());
+                                    int idEvento = idEventoR;
+
+
+                                    clEventoL objEmpresaEventoL = new clEventoL();
+                                    int resultado2 = objEmpresaEventoL.mtdRompimientoEmpresaL(TipoRol, idEvento, idEmpresa);
+
+
+                                }
+                                else
+                                {
+                                    clPersonaEventoJ objDatosEmpresaEvento = new clPersonaEventoJ();
+                                    string tipoRolPersona = "Organizador";
+                                    int idPersona = int.Parse(Session["idUsuarioPersona"].ToString());
+                                    int idEvento = idEventoR;
+
+                                    clEventoL objDatosPersonaEventoL = new clEventoL();
+                                    int resultado2 = objDatosPersonaEventoL.mtdRompimientoPersonaL(idPersona, idEvento, tipoRolPersona);
+                                }
+
+                                ClientScript.RegisterClientScriptBlock(this.GetType(), "Realizado", "swal('Evento Registrado Exitosamente').then((value) => { window.location = 'frmInicio.aspx';});", true);
+
+                            }
+                            else
+                            {
+                                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script> swal('Error' Error al Registrar','Danger') </script>");
+                            }
+                            limpiarCajasDeTexto();
                         }
-                        else
-                        {
-                            ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script> swal('Error' Error al Registrar','Danger') </script>");
-                        }
-                        limpiarCajasDeTexto();
                     }
-                }
 
 
+                }   
             }
-        }
 
+
+        }
         protected void limpiarCajasDeTexto()
         {
             txtNombreEvento.Text = "";
