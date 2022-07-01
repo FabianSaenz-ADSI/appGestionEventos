@@ -23,7 +23,28 @@ namespace appEventos2._0.Presentacion
 
 
                 clDetallesL objDetallesL = new clDetallesL();
-                listadoGeneral.DataSource = objDetallesL.mtdListarDetallesL(idEvento);
+                List<clEventosE> listaDetallesL = new List<clEventosE>();
+                listaDetallesL = objDetallesL.mtdListarDetallesL(idEvento);
+                for (int i = 0; i < listaDetallesL.Count; i++)
+                {
+                    listaDetallesL[i].nombreEvento = listaDetallesL[i].nombreEvento;
+                    listaDetallesL[i].ciudadEvento = listaDetallesL[i].ciudadEvento;
+                    listaDetallesL[i].lugarEvento = listaDetallesL[i].lugarEvento;
+                    listaDetallesL[i].edadMinima = listaDetallesL[i].edadMinima;
+                    listaDetallesL[i].responsable = listaDetallesL[i].responsable;
+                    listaDetallesL[i].direccion = listaDetallesL[i].direccion;
+                    listaDetallesL[i].categoria = listaDetallesL[i].direccion;
+                    listaDetallesL[i].aforo = listaDetallesL[i].aforo;
+                    listaDetallesL[i].aperturaPuertas = listaDetallesL[i].aperturaPuertas;
+                    listaDetallesL[i].nit = listaDetallesL[i].nit;
+                    listaDetallesL[i].fechaInicioEvento = listaDetallesL[i].fechaInicioEvento;
+                    listaDetallesL[i].fechaFinalEvento = listaDetallesL[i].fechaFinalEvento;
+                    Image1.ImageUrl = "logoEvento\\" + listaDetallesL[i].imagenRepresentativa;
+                    Image2.ImageUrl = "logoEvento\\" + listaDetallesL[i].imagenRepresentativa;
+                    Image3.ImageUrl = "logoEvento\\" + listaDetallesL[i].imagenRepresentativa;
+                    Image4.ImageUrl = "logoEvento\\" + listaDetallesL[i].imagenRepresentativa;
+                }
+                listadoGeneral.DataSource = listaDetallesL;
                 listadoGeneral.DataBind();
             }
 
