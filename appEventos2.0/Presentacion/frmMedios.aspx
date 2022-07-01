@@ -10,7 +10,7 @@
             <div class="col-md-12 bg-dark d-flex align-items-center">
                 <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">Registrar</h5>
-                    <h1 class="text-white mb-4">Registra Tus Boletas</h1>
+                    <h1 class="text-white mb-4">Agregar Publicidad</h1>
                     <form>
 
                         <div class="row g-3">

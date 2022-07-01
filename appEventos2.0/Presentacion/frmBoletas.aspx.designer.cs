@@ -51,15 +51,6 @@ namespace appEventos2._0.Presentacion
         protected global::System.Web.UI.WebControls.TextBox txtUbicacion;
 
         /// <summary>
-        /// Control txtCantidadBoletas.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidadBoletas;
-
-        /// <summary>
         /// Control btnRegistrarBoleta.
         /// </summary>
         /// <remarks>
