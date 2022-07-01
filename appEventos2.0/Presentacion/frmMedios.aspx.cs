@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace appEventos2._0.Presentacion
@@ -14,10 +15,22 @@ namespace appEventos2._0.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (!IsPostBack)
+            {
+                mtdlistarRegistrados();
+                Label lblUsuario = this.Master.FindControl("lblUsuario") as Label;
+                Button btnIngresarLogin = this.Master.FindControl("btnIngresarLogin") as Button;
+                HtmlAnchor crearCuenta = (HtmlAnchor)this.Master.FindControl("crearCuenta");
+                HtmlAnchor crearEvento = (HtmlAnchor)this.Master.FindControl("crearEvento");
+                btnIngresarLogin.Visible = false;
+                crearCuenta.Visible = false;
+                crearEvento.Visible = false;
+            }
         }
 
         protected void btnRegistrarMedio_Click(object sender, EventArgs e)
         {
+   
 
             if (txtMedio.Text == "" || txtTipoMedio.Text == "" || txtPublicidad.Text == "")
             {
@@ -30,7 +43,7 @@ namespace appEventos2._0.Presentacion
                 objDatosMedios.tipo = txtTipoMedio.Text;
                 objDatosMedios.urlWeb = hplWeb.Text;
                 objDatosMedios.redSocial = txtPublicidad.Text;
-                objDatosMedios.idEvento = int.Parse(dpRegistradosMedios.SelectedValue.ToString());
+                objDatosMedios.idEvento = int.Parse(dpRegistradosMedios.SelectedValue);
 
                 clMediosL objDatosL = new clMediosL();
                 int resultado = objDatosL.mtdRegistrarM(objDatosMedios);

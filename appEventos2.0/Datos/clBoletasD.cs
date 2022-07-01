@@ -10,7 +10,7 @@ namespace appEventos2._0.Datos
     {
         public int mtdRegistrarBoleta(clBoletasE objDatosBoleta)
         {
-            string consulta = "INSERT INTO tipoBoleta(tipoBoleta,precioBoleta,ubicacion,numeroBoletas,idEvento)values('" + objDatosBoleta.tipoBoleta + "'," + objDatosBoleta.precioBoleta + ",'" + objDatosBoleta.ubicacion + "','"+objDatosBoleta.numeroBoletas+"',"+objDatosBoleta.idEvento+")";
+            string consulta = "INSERT INTO tipoBoleta(tipoBoleta,precioBoleta,ubicacion,idEvento)values('" + objDatosBoleta.tipoBoleta + "'," + objDatosBoleta.precioBoleta + ",'" + objDatosBoleta.ubicacion + "','" + objDatosBoleta.idEvento + "')";
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;

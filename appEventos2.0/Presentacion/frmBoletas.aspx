@@ -44,12 +44,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
-                                <div class="form-floating date" data-target-input="nearest">
-                                    <asp:Label runat="server" Text="" ForeColor="White">Cantidad Boletas:</asp:Label>
-                                    <asp:TextBox ID="txtCantidadBoletas" runat="server" placeholder="Cantidad de Boletas con las que contara su evento" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
+
 
                             <div class="text-center alig-items-center justify-content-center">
                                 <asp:Button ID="btnRegistrarBoleta" runat="server" Text="Registrar Boleta" class="btn btn-outline-warning" OnClick="btnRegistrarBoleta_Click" />

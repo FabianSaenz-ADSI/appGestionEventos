@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace appEventos2._0.Presentacion
@@ -16,6 +17,15 @@ namespace appEventos2._0.Presentacion
 
             if (!IsPostBack)
             {
+                Label lblUsuario = this.Master.FindControl("lblUsuario") as Label;
+                Button btnIngresarLogin = this.Master.FindControl("btnIngresarLogin") as Button;
+                HtmlAnchor crearCuenta = (HtmlAnchor)this.Master.FindControl("crearCuenta");
+                HtmlAnchor crearEvento = (HtmlAnchor)this.Master.FindControl("crearEvento");
+                btnIngresarLogin.Visible = false;
+                crearCuenta.Visible = false;
+                crearEvento.Visible = false;
+
+
                 string valor = Convert.ToString(Request.QueryString["idE"]);
                 labelDetalles.Attributes.Add("Style", "DISPLAY:none");
                 labelDetalles.Text = valor;
