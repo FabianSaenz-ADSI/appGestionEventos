@@ -23,6 +23,9 @@ namespace appEventos2._0.Presentacion
 
 
                 clDetallesL objDetallesL = new clDetallesL();
+                List<clEventosE> listaDetalles = new List<clEventosE>();
+                listaDetalles = objDetallesL.mtdListarDetallesL(idEvento);
+                
                 listadoGeneral.DataSource = objDetallesL.mtdListarDetallesL(idEvento);
                 listadoGeneral.DataBind();
             }

@@ -94,14 +94,14 @@
                             <div class="col-md-6">
                                 <div class="form-floating date">
                                     <asp:Label for="txtFechaInicial" runat="server" Text="" ForeColor="White">Fecha Inicio:</asp:Label>
-                                    <asp:TextBox ID="txtFechaInicial" runat="server" placeholder="Fecha Inicial evento" CssClass="form-control" BorderColor="DarkBlue"></asp:TextBox>
+                                    <asp:TextBox ID="txtFechaInicial" runat="server" placeholder="Fecha Inicial evento" CssClass="form-control" BorderColor="DarkBlue" TextMode="Date"></asp:TextBox>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-floating date">
                                     <asp:Label for="txtFechaFinal" runat="server" Text="" ForeColor="White">Fecha Terminacion:</asp:Label>
-                                    <asp:TextBox ID="txtFechaFinal" runat="server" placeholder="Fecha Terminacion" CssClass="form-control" BorderColor="DarkBlue"></asp:TextBox>
+                                    <asp:TextBox ID="txtFechaFinal" runat="server" placeholder="Fecha Terminacion" CssClass="form-control" BorderColor="DarkBlue" TextMode="Date"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -109,7 +109,7 @@
                                 <asp:Label ID="Label10" runat="server" Text="Imagen Representativa" ForeColor="White"></asp:Label>
                                 <div class="form-floating">
 
-                                    <asp:Image ImageUrl="https://idescargar.com/wp-content/uploads/2018/01/lucky-patcher-apk.png" ID="img" runat="server" Width="150" Height="150" />
+                                    <asp:Image  ID="img" runat="server" Width="150" Height="150" />
                                     <asp:FileUpload ID="fluImagen" runat="server" onchange="mostrarImagen(this)" />
 
                                 </div>

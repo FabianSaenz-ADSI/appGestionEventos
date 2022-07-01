@@ -10,16 +10,16 @@
                 <div class="col-lg-4">
                     <div class="row g-3">
                         <div class="col-6 text-start">
-                            <asp:Image ID="Image1" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" /><br>
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" imageurl="logoEvento/.jpg'<%#Eval("imagenRepresentativa") %>'">
                         </div>
                         <div class="col-6 text-start">
-                            <asp:Image ID="Image2" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" Style="margin-top: 25%;" /><br>
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src='<%#Eval("imagenRepresentativa") %>' style="margin-top: 25%;">
                         </div>
                         <div class="col-6 text-end">
-                            <asp:Image ID="Image3" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" /><br>
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src='<%#Eval("imagenRepresentativa") %>'>
                         </div>
                         <div class="col-6 text-end">
-                            <asp:Image ID="Image4" runat="server" ImageUrl="https://offroadcolombia.com/wp-content/uploads/2021/02/IMG_20200518_071733-min-scaled.jpg" class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" /><br>
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src='<%#Eval("imagenRepresentativa") %>'>
                         </div>
                     </div>
                 </div>

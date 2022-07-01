@@ -30,9 +30,10 @@ namespace appEventos2._0.Datos
 
         public int mtdRegistrarEvento(clEventosE objDatosEvento)
         {
-            string consulta = "INSERT  INTO evento(nombreEvento,ciudadEvento,lugarEvento,edadMinima,responsable,direccion,categoria,aforo,aperturaPuertas,nit,fechaInicioEvento,fechaFinalEvento,imagenRepresentativa,idTipoEvento)values('" + objDatosEvento.nombreEvento + "','" + objDatosEvento.ciudadEvento + "','" + objDatosEvento.lugarEvento + "','" + objDatosEvento.edadMinima + "','" + objDatosEvento.responsable + "','" + objDatosEvento.direccion + "','" + objDatosEvento.categoria + "'," + objDatosEvento.aforo + ",'" + objDatosEvento.aperturaPuertas + "'," + objDatosEvento.nit + ",'" + objDatosEvento.fechaInicioEvento + "','" + objDatosEvento.fechaFinalEvento + "','" + objDatosEvento.imagenRepresentativa + "','" + objDatosEvento.idTipoEvento + "')";
+
+            string consulta = "INSERT  INTO evento(nombreEvento,ciudadEvento,lugarEvento,edadMinima,responsable,direccion,categoria,aforo,aperturaPuertas,nit,fechaInicioEvento,fechaFinalEvento,imagenRepresentativa,idTipoEvento)values('" + objDatosEvento.nombreEvento + "','" + objDatosEvento.ciudadEvento + "','" + objDatosEvento.lugarEvento + "','" + objDatosEvento.edadMinima + "','" + objDatosEvento.responsable + "','" + objDatosEvento.direccion + "','" + objDatosEvento.categoria + "'," + objDatosEvento.aforo + ",'" + objDatosEvento.aperturaPuertas + "'," + objDatosEvento.nit + ",'" + objDatosEvento.fechaInicioEvento + "','" + objDatosEvento.fechaFinalEvento + "','" + objDatosEvento.imagenRepresentativa + "','" + objDatosEvento.idTipoEvento + "');SELECT SCOPE_IDENTITY()";
             clConexion objConexion = new clConexion();
-            int resultado = objConexion.mtdConectado(consulta);
+            int resultado = objConexion.mtdConectadoId(consulta);
             return resultado;
         }
 
@@ -87,6 +88,23 @@ namespace appEventos2._0.Datos
             }
             return listaEventosInicio;
         }
+
+        public int mtdRegistrarTipoEmpresa(string tipoRol, int idEvento, int idEmpresa)
+        {
+            string consulta = "INSERT INTO empresaEvento (idEmpresa,idEvento,tipoRolEmpresa)values('" + idEmpresa + "'," + idEvento + ",'" + tipoRol + "')";
+            clConexion objConexion = new clConexion();
+            int resultado = objConexion.mtdConectado(consulta);
+            return resultado;
+        }
+
+        public int mtdRegistrarTipoPersona(int idPersona, int idEvento, string TipoRolPersona)
+        {
+            string consulta = "INSERT INTO PersonaEvento (idPersona,idEvento,tipoRolPersona)values('" + idPersona + "'," + idEvento + ",'" + TipoRolPersona + "')";
+            clConexion objConexion = new clConexion();
+            int resultado = objConexion.mtdConectado(consulta);
+            return resultado;
+        }
+
 
     }
 }

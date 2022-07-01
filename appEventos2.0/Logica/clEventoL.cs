@@ -39,5 +39,21 @@ namespace appEventos2._0.Logica
             listadoeventosI = objlistaEventosD.mtdListarEventosInicio();
             return listadoeventosI;
         }
+
+        public int mtdRompimientoEmpresaL(string tipoRolEmpresa, int idEvento, int idEmpresa)
+        {
+            clEventosD objDatosEventosD = new clEventosD();
+            int resultado = objDatosEventosD.mtdRegistrarTipoEmpresa(tipoRolEmpresa, idEvento, idEmpresa);
+            return resultado;
+
+        }
+
+        public int mtdRompimientoPersonaL(int idPersona, int idEvento, string TipoRolPersona)
+        {
+            clEventosD objDatosEventosPersonaD = new clEventosD();
+            int resultado = objDatosEventosPersonaD.mtdRegistrarTipoPersona(idPersona, idEvento, TipoRolPersona);
+            return resultado;
+
+        }
     }
 }
